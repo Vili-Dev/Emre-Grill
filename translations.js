@@ -31,8 +31,8 @@ const translations = {
         call_action: "Appeler maintenant",
         email_action: "Envoyer un email",
         address: "181 rue de Gand, Tourcoing, France",
-        phone: "Numéro de téléphone",
-        email: "Email",
+        phone: "Numéro de téléphone:",
+        email: "Email:",
         hours: "Ouvert tous les jours 11:00–14:30 et 17:00–23:00",
         price_range: "Prix moyen: €10–20",
         copyright: "© 2025 Emre Grill. Tous droits réservés."
@@ -69,8 +69,8 @@ const translations = {
         call_action: "Call now",
         email_action: "Send an email",
         address: "181 rue de Gand, Tourcoing, France",
-        phone: "Phone number",
-        email: "E-mail",
+        phone: "Phone number:",
+        email: "E-mail:",
         hours: "Open every day 11:00–14:30 and 17:00–23:00",
         price_range: "Average price: €10–20",
         copyright: "© 2025 Emre Grill. All rights reserved."
@@ -107,8 +107,8 @@ const translations = {
         call_action: "Hemen ara",
         email_action: "E-posta gönder",
         address: "181 rue de Gand, Tourcoing, Fransa",
-        phone: "Telefon numarası",
-        email: "E-posta",
+        phone: "Telefon numarası:",
+        email: "E-posta:",
         hours: "Her gün açık 11:00–14:30 ve 17:00–23:00",
         price_range: "Ortalama fiyat: €10–20",
         copyright: "© 2025 Emre Grill. Tüm hakları saklıdır."
