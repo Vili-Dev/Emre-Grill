@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Emre Grill - Authentic Turkish restaurant in Tourcoing">
+    <title>Emre Grill - Restaurant Turc</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload hero image -->
+    <link rel="preload" href="hero-bg.jpg" as="image">
+    
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Load scripts with defer -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="particles.js" defer></script>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+
+    <!-- Preload font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+</head>
+<body class="bg-black text-white">
+    <!-- Restaurant Name Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-black bg-opacity-80 py-4">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-3xl font-bold text-white animate-fade-in" data-translate="restaurant_name">Emre Grill</h1>
+        </div>
+    </header>
+
+    <!-- Language Selector -->
+    <div class="fixed top-20 right-4 z-50">
+        <div class="flex space-x-2 bg-black bg-opacity-70 p-2 rounded-full">
+            <button class="lang-btn hover:scale-110 transition-transform" data-lang="fr" title="Français">🇫🇷</button>
+            <button class="lang-btn hover:scale-110 transition-transform" data-lang="en" title="English">🇬🇧</button>
+            <button class="lang-btn hover:scale-110 transition-transform" data-lang="tr" title="Türkçe">🇹🇷</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative z-10 text-center px-4 animate-fade-in">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-translate="hero_title">Saveurs turques authentiques à Tourcoing</h1>
+            <button onclick="scrollToMenu()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105" data-translate="hero_cta">Découvrir le menu</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 max-w-4xl mx-auto">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-translate="about_title">À propos</h2>
+            <div class="bg-black bg-opacity-70 p-8 rounded-lg">
+                <p class="text-lg leading-relaxed" data-translate="about_text">Emre grill (or Emre kebab) is a fast-food restaurant located in Tourcoing...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties" class="py-20 bg-black bg-opacity-90">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="specialties_title">Nos spécialités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kebab -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="kebab.jpg" alt="Kebab" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="kebab_title">Kebab</h3>
+                    <p class="text-gray-300 mt-2" data-translate="kebab_desc">Savoureux kebab traditionnel avec pain frais et sauce maison</p>
+                </div>
+                
+                <!-- Pide -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="pide.jpg" alt="Pide" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="pide_title">Pide</h3>
+                    <p class="text-gray-300 mt-2" data-translate="pide_desc">Pain turc garni de viande hachée, fromage et légumes</p>
+                </div>
+                
+                <!-- Iskender -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="iskender.jpg" alt="Iskender" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="iskender_title">Iskender</h3>
+                    <p class="text-gray-300 mt-2" data-translate="iskender_desc">Délicieux plat de viande avec sauce tomate et yaourt</p>
+                </div>
+                
+                <!-- Köfte -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="kofte.jpg" alt="Köfte" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="kofte_title">Köfte</h3>
+                    <p class="text-gray-300 mt-2" data-translate="kofte_desc">Boulettes de viande épicées avec accompagnements</p>
+                </div>
+                
+                <!-- Baklava -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="baklava.jpg" alt="Baklava" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="baklava_title">Baklava</h3>
+                    <p class="text-gray-300 mt-2" data-translate="baklava_desc">Dessert turc traditionnel aux noix et sirop</p>
+                </div>
+                
+                <!-- Turkish Pizza -->
+                <div class="specialty-card group">
+                    <div class="overflow-hidden rounded-lg">
+                        <img src="pizza.jpg" alt="Turkish Pizza" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4" data-translate="pizza_title">Pizza Turque</h3>
+                    <p class="text-gray-300 mt-2" data-translate="pizza_desc">Pizza fine avec garnitures turques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-black bg-opacity-80">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="review_title">Avis clients</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">★★★★★</div>
+                        <span class="ml-2 text-gray-300">5/5</span>
+                    </div>
+                    <p class="text-gray-300 italic" data-translate="review1_text">"Le meilleur kebab de Tourcoing! Les saveurs sont authentiques et le service est excellent."</p>
+                    <p class="text-gray-400 mt-4" data-translate="review1_author">- Jean D.</p>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">★★★★☆</div>
+                        <span class="ml-2 text-gray-300">4/5</span>
+                    </div>
+                    <p class="text-gray-300 italic" data-translate="review2_text">"Les pides sont délicieuses et généreusement garnies. Je recommande!"</p>
+                    <p class="text-gray-400 mt-4" data-translate="review2_author">- Marie L.</p>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-2xl">★★★★★</div>
+                        <span class="ml-2 text-gray-300">5/5</span>
+                    </div>
+                    <p class="text-gray-300 italic" data-translate="review3_text">"Le baklava est à tomber! Un vrai régal après un bon repas turc."</p>
+                    <p class="text-gray-400 mt-4" data-translate="review3_author">- Thomas P.</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-gray-400" data-translate="rating_text">Note moyenne: 4.4/5 (573 avis)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practical Info Section -->
+    <section id="info" class="py-20 bg-black bg-opacity-90">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="info_title">Informations pratiques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500" data-translate="contact_title">Nous contacter</h3>
+                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="address">Adresse:</span> 181 rue de Gand, Tourcoing, France</p>
+                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="phone">Téléphone:</span> <a href="tel:+33953879560" class="hover:text-red-500">09 53 87 95 60</a></p>
+                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="email">Email:</span> <a href="mailto:emresnack@hotmail.com" class="hover:text-red-500">emresnack@hotmail.com</a></p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Horaires</h3>
+                    <p class="text-gray-300" data-translate="hours">Ouvert tous les jours 11:00–14:30 et 17:00–23:00</p>
+                    <p class="text-gray-300 mt-4"><span class="font-semibold" data-translate="price_range">Prix moyen:</span> €10–20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black bg-opacity-80">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12" data-translate="contact_title">Nous contacter</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="tel:+33953879560" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="call_action">Appeler maintenant</a>
+                <a href="mailto:emresnack@hotmail.com" class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="email_action">Envoyer un email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-gray-400" data-translate="copyright">© 2025 Emre Grill. Tous droits réservés.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/p/Emre-Grill-100063545413442" target="_blank" class="text-gray-400 hover:text-red-500 transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

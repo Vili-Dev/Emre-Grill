@@ -1,0 +1,136 @@
+/* Critical CSS - Load first */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0a0a0a;
+    background-image: url('https://www.transparenttextures.com/patterns/black-scales.png');
+    background-attachment: fixed;
+}
+
+/* Hero section styling */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+
+/* Specialties styling */
+.specialty-card {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.specialty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+}
+
+.specialty-card img {
+    transition: transform 0.5s ease;
+}
+
+.specialty-card h3 {
+    color: #e63946;
+    transition: color 0.3s ease;
+}
+
+.specialty-card:hover h3 {
+    color: #ffffff;
+}
+
+/* Smoke effect for dish images */
+.specialty-card:hover img {
+    position: relative;
+}
+
+.specialty-card:hover img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    animation: smoke 2s ease-out infinite;
+}
+
+@keyframes smoke {
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 0.4; }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll animations */
+@keyframes slide-up {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .specialty-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Language selector animation */
+.lang-btn {
+    transition: transform 0.2s;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #e63946;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c1121f;
+    transform: translateY(-2px);
+}
+
+/* Section animations */
+section {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+section.show {
+    opacity: 1;
+}
