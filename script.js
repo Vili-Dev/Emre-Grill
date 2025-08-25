@@ -5,6 +5,13 @@ function scrollToMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+    });
     // Initialize language
     updateTextContent();
 

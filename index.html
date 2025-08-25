@@ -17,14 +17,17 @@
     
     <!-- Load CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Load scripts with defer -->
     <script src="https://cdn.tailwindcss.com" defer></script>
     <script src="particles.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     
     <!-- Preconnect to external domains -->
     <link rel="dns-prefetch" href="//www.facebook.com">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//unpkg.com">
 
     <!-- Preload font -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -50,27 +53,48 @@
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex items-center justify-center">
         <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 text-center px-4 animate-fade-in">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-translate="hero_title">Saveurs turques authentiques à Tourcoing</h1>
-            <button onclick="scrollToMenu()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105" data-translate="hero_cta">Découvrir le menu</button>
+        <div class="relative z-10 text-center px-4" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6" data-translate="hero_title" data-aos="zoom-in" data-aos-delay="200">Saveurs turques authentiques à Tourcoing</h1>
+            <button onclick="scrollToMenu()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105"
+                    data-translate="hero_cta"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+                Découvrir le menu
+            </button>
+        </div>
+    </section>
+
+    <!-- History/Tradition Section -->
+    <section id="history" class="py-20 bg-black bg-opacity-90" data-aos="fade-up">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="history_title" data-aos="zoom-in">Histoire & Tradition</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="bg-black bg-opacity-70 p-8 rounded-lg" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4 text-red-500" data-translate="cuisine_title">La cuisine turque</h3>
+                    <p class="text-lg leading-relaxed" data-translate="cuisine_text">La cuisine turque est l'une des plus riches au monde, combinant des saveurs de la Méditerranée, du Moyen-Orient et de l'Asie centrale. Chez Emre Grill, nous préservons cette tradition en servant des plats authentiques préparés avec passion.</p>
+                </div>
+                <div class="rounded-lg overflow-hidden" data-aos="fade-left">
+                    <img src="tradition.jpg" alt="Turkish cuisine tradition" class="w-full h-auto object-cover">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-4 max-w-4xl mx-auto">
+    <section id="about" class="py-20 px-4 max-w-4xl mx-auto" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-8 text-center" data-translate="about_title">À propos</h2>
-            <div class="bg-black bg-opacity-70 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold mb-8 text-center" data-translate="about_title" data-aos="zoom-in">À propos</h2>
+            <div class="bg-black bg-opacity-70 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
                 <p class="text-lg leading-relaxed" data-translate="about_text">Emre grill (or Emre kebab) is a fast-food restaurant located in Tourcoing...</p>
             </div>
         </div>
     </section>
 
     <!-- Specialties Section -->
-    <section id="specialties" class="py-20 bg-black bg-opacity-90">
+    <section id="specialties" class="py-20 bg-black bg-opacity-90" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="specialties_title">Nos spécialités</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="specialties_title" data-aos="zoom-in">Nos spécialités</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
                 <!-- Kebab -->
                 <div class="specialty-card group">
                     <div class="overflow-hidden rounded-lg">
@@ -129,10 +153,10 @@
     </section>
 
     <!-- Reviews Section -->
-    <section id="reviews" class="py-20 bg-black bg-opacity-80">
+    <section id="reviews" class="py-20 bg-black bg-opacity-80" data-aos="fade-up">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="review_title">Avis clients</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="review_title" data-aos="zoom-in">Avis clients</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
                 <!-- Review 1 -->
                 <div class="bg-black bg-opacity-70 p-6 rounded-lg">
                     <div class="flex items-center mb-4">
@@ -175,10 +199,8 @@
             <h2 class="text-3xl font-bold mb-12 text-center" data-translate="info_title">Informations pratiques</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4 text-red-500" data-translate="contact_title">Nous contacter</h3>
-                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="address">Adresse:</span></p>
-                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="phone">Téléphone:</span> <a href="tel:+33953879560" class="hover:text-red-500">09 53 87 95 60</a></p>
-                    <p class="text-gray-300 mb-2"><span class="font-semibold" data-translate="email">Email:</span> <a href="mailto:emresnack@hotmail.com" class="hover:text-red-500">emresnack@hotmail.com</a></p>
+                    <h3 class="text-xl font-bold mb-4 text-red-500" data-translate="address_title">Adresse</h3>
+                    <p class="text-gray-300">181 rue de Gand, Tourcoing, France</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4 text-red-500">Horaires</h3>
@@ -189,13 +211,47 @@
         </div>
     </section>
 
+    <!-- Instagram Section -->
+    <section id="instagram" class="py-20 bg-black bg-opacity-90" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-translate="instagram_title" data-aos="zoom-in">Instagram</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- Instagram posts will be loaded here -->
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram1.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram2.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram3.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram4.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram5.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+                <div class="instagram-post aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                    <img src="instagram6.jpg" alt="Instagram post" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="https://www.instagram.com/emregrill" target="_blank" class="inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="instagram_cta">
+                    Voir plus sur Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-black bg-opacity-80">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-12" data-translate="contact_title">Nous contacter</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="tel:+33953879560" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="call_action">Appeler maintenant</a>
-                <a href="mailto:emresnack@hotmail.com" class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="email_action">Envoyer un email</a>
+            <div class="flex justify-center">
+                <a href="https://www.instagram.com/emre_tourcoing?igsh=dTJ2azQxbDJ5NDV3" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full transition duration-300 transform hover:scale-105" data-translate="instagram_cta">
+                    Nous contacter sur Instagram
+                </a>
             </div>
         </div>
     </section>
